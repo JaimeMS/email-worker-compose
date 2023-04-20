@@ -24,5 +24,3 @@ services:
       - ./app:/app
     working_dir: /app
     command: bash ./app.sh
-
-

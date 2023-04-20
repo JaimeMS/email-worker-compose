@@ -8,7 +8,7 @@ SQL = 'INSERT INTO emails (assunto, mensagem) VALUES (%s, %s)'
 def send():
     assunto = request.forms.get('assunto')
     mensagem = request.forms.get('mensagem')
-    
+
     return 'Mensagem enfileirada! Assunto: {} Mensagem: {}'.format(
         assunto, mensagem
     )
