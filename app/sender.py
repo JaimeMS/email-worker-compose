@@ -1,14 +1,25 @@
 from bottle import route, run, request
 import psycopg2
  
-DSN = 'dbname=email_sender user=postgres password=postgres host=db'
+DSN = 'dbname=email_sender user=postgres password=trust host=db'
 SQL = 'INSERT INTO emails (assunto, mensagem) VALUES (%s, %s)'
- 
+
+def register_message(assunto, mensagem): 
+    conn = psycopg2.connect(DSN)
+    cur = conn.cursor()
+    cur.execute(SQL, (assunto, mensagem))
+    conn.commit()
+    cur.close()
+    conn.close()
+    
+    print('Mensagem registrada!')
+
 @route('/', method='POST')
 def send():
     assunto = request.forms.get('assunto')
     mensagem = request.forms.get('mensagem')
 
+    register_message(assunto, mensagem)
     return 'Mensagem enfileirada! Assunto: {} Mensagem: {}'.format(
         assunto, mensagem
     )
