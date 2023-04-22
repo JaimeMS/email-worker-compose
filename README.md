@@ -9,6 +9,7 @@ Aula de Docker
 ## Pré-requisitos
 
 * [Docker](https://hub.docker.com/ "Docker hub")  - É necessário criar uma conta no repositório do docker 
-* [Docker](https://www.docker.com/products/docker-desktop/ "Docker hub")  - Docker desktop para criação dos serviços docker
+* [Docker](https://www.docker.com/products/docker-desktop/ "Download do Docker Desktop")  - Docker desktop para criação dos serviços docker
+* [Documentação](https://docs.docker.com/desktop/ "Docker documentação")  - Documentação
 
 
