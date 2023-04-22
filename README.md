@@ -11,5 +11,4 @@ Aula de Docker
 * [Docker](https://hub.docker.com/ "Docker hub")  - É necessário criar uma conta no repositório do docker 
 * [Docker](https://www.docker.com/products/docker-desktop/ "Docker hub")  - Docker desktop para criação dos serviços docker
 
-## Começando
-- 
+
